@@ -8,3 +8,9 @@
 
 // # ORIGINAL TEAM FROM OTHER FILE
 console.table(teamMembers);
+
+// # HTML ELEMENTS FROM PAGE TO INTERACT WITH
+const teamCardsElement = document.getElementById('team-cards');
+
+// # ONLOAD
+renderTeamCards(teamMembers);
