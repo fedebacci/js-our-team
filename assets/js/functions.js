@@ -25,13 +25,13 @@ const generateMemberCard = (member) => {
 
     const memberCardColumn = document.createElement('div');
     // memberCard.className = 'card d-flex bg-dark text-bg-dark shadow';
-    memberCardColumn.className = 'col-12 col-md-6 col-lg-4';
+    memberCardColumn.className = 'col-12 col-md-6 col-xl-4';
     memberCardColumn.innerHTML = `
         <div class="d-flex flex-row h-100 bg-dark text-bg-dark shadow">
             <div class="img-container">
                 <img src="assets/${img}" alt="${name}" class="img-fluid"/>
             </div>
-            <div class="info-container py-3 px-4">
+            <div class="info-container p-3">
                 <h4 class="fw-bold mb-1">
                     ${name}
                 </h4>
