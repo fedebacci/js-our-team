@@ -6,34 +6,33 @@
 // - COMMENTO TEXT
 // todo COMMENTO TODO
 
-// # ORIGINAL TEAM FROM OTHER FILE
+
+
+// # TEAM ORIGINALE DAL FILE script.js
 console.table(teamMembers);
 
-// # HTML ELEMENTS FROM PAGE TO INTERACT WITH
-const teamCardsElement = document.getElementById('team-cards');
 
+
+// # ELEMENTI HTML DELLA PAGINA CON CUI INTERAGIRE
+// - ELEMENTI A CUI AGGIUNGERE INFORMAZIONI
+const teamCardsElement = document.getElementById('team-cards');
+// - ELEMENTI DA CUI RICEVERE INFORMAZIONI
 const addMemberFormElement = document.getElementById('add-member-form');
 const newMemberNameInput = document.getElementById('new-member-name');
 const newMemberRoleInput = document.getElementById('new-member-role');
 const newMemberEmailInput = document.getElementById('new-member-email');
 const newMemberImageInput = document.getElementById('new-member-image');
 
-// # ON LOAD
+
+
+// # FUNZIONI DA ESEGUIRE AL CARICAMENTO DELLO SCRIPT
 renderTeamCards(teamMembers);
 
-// # ON EVENT
+
+
+// # EVENTI DA ASCOLTARE
+// - EVENTO SUBMIT
 addMemberFormElement.addEventListener('submit', (e) => {
     e.preventDefault();
-    const name = newMemberNameInput.value;
-    const role = newMemberRoleInput.value;
-    const email = newMemberEmailInput.value;
-    const userImage = newMemberImageInput.value;
-    const img = "img/fede-idiota.jpg";
-    console.info(`L'immagine che hai inserito: "${userImage}" è stata sostituita automaticamente con un'immagine scelta da me (${img}).`)
-    const newMember = { name, role, email, img };
-    
-    teamMembers.push(newMember);
-    console.table(teamMembers);
-    const newMemberCard = generateMemberCard(newMember);
-    addMemberCard(newMemberCard);
+    addNewMember(newMemberNameInput.value, newMemberRoleInput.value, newMemberEmailInput.value, newMemberImageInput.value);
 });

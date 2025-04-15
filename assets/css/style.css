@@ -30,7 +30,9 @@ section {
     padding: calc(2 * var(--section-spacing)) 0;
 }
 
-
+.memberCard > div {
+    flex: 1 0 50%;
+}
 
 .img-container {
     max-width: 120px;
