@@ -8,26 +8,21 @@
 
 
 
-// console.debug(teamCardsElement);
 const renderTeamCards = (teamMembers) => {
-    // console.debug(teamMembers);
     teamMembers.forEach(member => {
         const memberCard = generateMemberCard(member);
-        teamCardsElement.appendChild(memberCard);
+        addMemberCard(memberCard);
     });
 };
 
 
 const generateMemberCard = (member) => {
-    // console.debug(member);
-
     const { name, role, email, img } = member;
 
     const memberCardColumn = document.createElement('div');
-    // memberCard.className = 'card d-flex bg-dark text-bg-dark shadow';
     memberCardColumn.className = 'col-12 col-md-6 col-xl-4';
     memberCardColumn.innerHTML = `
-        <div class="d-flex flex-row h-100 bg-dark text-bg-dark shadow">
+        <div class="d-flex flex-row align-items-center h-100 bg-dark text-bg-dark shadow">
             <div class="img-container">
                 <img src="assets/${img}" alt="${name}" class="img-fluid"/>
             </div>
@@ -45,4 +40,8 @@ const generateMemberCard = (member) => {
         </div>
     `;
     return memberCardColumn;
-}
+};
+
+const addMemberCard = (memberCard) => {
+    teamCardsElement.appendChild(memberCard);
+};

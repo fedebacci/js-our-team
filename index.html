@@ -69,6 +69,60 @@
                 </div>
             </div>
         </section>
+        <section id="add-member">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="text-center fw-bold text-danger mb-5">
+                            Add a member to the Team
+                        </h2>
+                        <form action="" id="add-member-form">
+                            <div class="row gy-3">
+                                <div class="col-12 col-lg-4">
+                                    <label for="new-member-name" class="form-label">
+                                        New member name
+                                    </label>
+                                    <input type="text" class="form-control" id="new-member-name" />
+                                </div>
+                                <div class="col-12 col-lg-4">
+                                    <label for="new-member-role" class="form-label">
+                                        New member role
+                                    </label>
+                                    <input type="text" class="form-control" id="new-member-role" />
+                                </div>
+                                <div class="col-12 col-lg-4">
+                                    <label for="new-member-email" class="form-label">
+                                        New member email
+                                    </label>
+                                    <input type="email" class="form-control" id="new-member-email" />
+                                </div>
+                                <div class="col-12">
+                                    <div class="mb-3">
+                                        <label for="new-member-image" class="form-label">
+                                            New member image
+                                        </label>
+                                        <input type="text" class="form-control" id="new-member-image"
+                                            aria-describedby="new-member-image-help">
+                                        <div id="new-member-image-help" class="form-text">
+                                            Inserisci il percorso dell'immagine.
+                                            <br />
+                                            L'immagine da te inserita verrà stampata in console, ma il percorso verrà
+                                            sostituito con un valore predefinito.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn btn-primary d-block mx-auto" type="submit">
+                                        Aggiungi membro
+                                    </button>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- BOOTSTRAP 5.3.3 CDN (JS) -->
